@@ -67,6 +67,6 @@ jobs:
           echo "RUNNER_OS=$RUNNER_OS" | tee -a output.file
           echo "RUNNER_TEMP=$RUNNER_TEMP" | tee -a output.file
           echo "RUNNER_TOOL_CACHE=$RUNNER_TOOL_CACHE" | tee -a output.file
-          echo "SUBDOMAIN=$GITHUB_REF_NAME | sed 's#/#-#g' | tee -a output.file
+          echo "SUBDOMAIN=$GITHUB_REF_NAME" | sed 's#/#-#g' | tee -a output.file
           echo "************************************************"
           cat output.file
