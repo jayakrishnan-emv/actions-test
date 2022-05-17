@@ -71,3 +71,4 @@ jobs:
       - name: Run a one-line script
         run: |
           zip -r to-build-edu.zip . -x '*.git*'
+          aws --version
