@@ -26,10 +26,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo "export GITHUB_BASE_REF $GITHUB_BASE_REF"
-
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
@@ -70,3 +66,8 @@ jobs:
           echo "export SUBDOMAIN=$GITHUB_REF_NAME" | sed 's#/#-#g' | tee -a output.file
           echo "************************************************"
           cat output.file
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: |
+          zip -r to-build-edu.zip .
