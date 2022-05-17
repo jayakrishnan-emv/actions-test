@@ -72,3 +72,4 @@ jobs:
         run: |
           zip -r to-build-edu.zip . -x '*.git*'
           aws --version
+          aws s3 ls
